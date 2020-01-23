@@ -1,0 +1,44 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UIElement"
+        xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Name="UIElement" x:Class="UIElement.MainWindow"
+        mc:Ignorable="d"
+        Title="Biodata  Mahasiswa" Height="450" Width="800">
+    <Grid>
+        <local:MyTextBox x:Name="nama_txt" HorizontalAlignment="Left" Height="23" Margin="146,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" PreviewTextInput="ValidasiHuruf"/>
+        <local:MyLabel x:Name="nama_lbl" Content="Nama" HorizontalAlignment="Left" Margin="25,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyTextBox x:Name="nrp_txt" HorizontalAlignment="Left" Height="23" Margin="146,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" PreviewTextInput="ValidasiAngka"/>
+        <local:MyLabel x:Name="nrp_lbl" Content="NRP" HorizontalAlignment="Left" Margin="25,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyLabel x:Name="tglLahir_lbl" Content="Tanggal lahir" HorizontalAlignment="Left" Margin="25,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyDatePicker x:Name="tglLahir_dat" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="146,111,0,0" Width="177" IsTodayHighlighted="True" SelectedDateFormat="Short" SelectedDate="1/1/1998"/>
+        <local:MyLabel x:Name="jenisKelamin_lbl" Content="Jenis kelamin" HorizontalAlignment="Left" Margin="25,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyRadioButton x:Name="jkLaki_rdo" Content="Laki-laki" HorizontalAlignment="Left" Margin="146,144,0,0" VerticalAlignment="Top" GroupName="jenis_kelamin"/>
+        <local:MyRadioButton x:Name="jkPerempuan_rdo" Content="Perempuan" HorizontalAlignment="Left" Margin="246,144,0,0" VerticalAlignment="Top" GroupName="jenis_kelamin"/>
+        <local:MyLabel x:Name="agama_lbl" Content="Agama" HorizontalAlignment="Left" Margin="25,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyComboBox x:Name="agama_cbo" HorizontalAlignment="Left" Margin="146,172,0,0" VerticalAlignment="Top" Width="177" />
+        <local:MyLabel  x:Name="prestasi_lbl" Content="Prestasi yang pernah diraih" HorizontalAlignment="Left" Margin="373,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyListBox x:Name="prestasi_lb" HorizontalAlignment="Left" Height="56" Margin="535,79,0,0" VerticalAlignment="Top" Width="233"/>
+        <local:MyTextBox x:Name="prestasi_txt" HorizontalAlignment="Left" Height="23" Margin="535,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
+        <local:MyButton x:Name="tambah_btn" Content="+" HorizontalAlignment="Left" Margin="745,51,0,0" VerticalAlignment="Top" Width="23" Click="OnClickTambah_btn" FontWeight="Bold" Height="23"/>
+        <local:MyLabel x:Name="alamat_lbl" Content="Alamat" HorizontalAlignment="Left" Margin="25,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyTextBox x:Name="alamat_txt" HorizontalAlignment="Left" Height="79" Margin="146,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"/>
+        <local:MyTextBox x:Name="noHp_txt" HorizontalAlignment="Left" Height="23" Margin="146,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" PreviewTextInput="ValidasiAngka"/>
+        <local:MyTextBox x:Name="email_txt" HorizontalAlignment="Left" Height="23" Margin="146,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <local:MyTextBox x:Name="linkedin_txt" HorizontalAlignment="Left" Height="23" Margin="146,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <local:MyLabel x:Name="noHp_lbl" Content="Nomor HP" HorizontalAlignment="Left" Margin="25,202,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyLabel x:Name="email_lbl" Content="Email" HorizontalAlignment="Left" Margin="25,233,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyLabel x:Name="linkedin_lbl" Content="LinkedIn" HorizontalAlignment="Left" Margin="25,264,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyLabel x:Name="hobi_lbl" Content="Hobi" HorizontalAlignment="Left" Margin="373,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.026,-1.385"/>
+        <local:MyCheckBox x:Name="pilihSemua_chk" Content="Semua" HorizontalAlignment="Left" Margin="535,147,0,0" VerticalAlignment="Top" Checked="OnCheckedPilihSemua_chk" Unchecked="OnCheckedPilihSemua_chk"/>
+        <local:MyCheckBox x:Name="membaca_chk" Content="Membaca" HorizontalAlignment="Left" Margin="535,168,0,0" VerticalAlignment="Top"/>
+        <local:MyCheckBox x:Name="menulis_chk" Content="Menulis" HorizontalAlignment="Left" Margin="535,189,0,0" VerticalAlignment="Top"/>
+        <local:MyCheckBox x:Name="mendengarkanMusik_chk" Content="Mendengarkan musik" HorizontalAlignment="Left" Margin="535,210,0,0" VerticalAlignment="Top"/>
+        <local:MyCheckBox x:Name="bermainMusik_chk" Content="Bermain musik" HorizontalAlignment="Left" Margin="535,231,0,0" VerticalAlignment="Top"/>
+        <local:MyCheckBox x:Name="berolahraga_chk" Content="Berolahraga" HorizontalAlignment="Left" Margin="535,252,0,0" VerticalAlignment="Top"/>
+        <local:MyCheckBox x:Name="menontonFilm_chk" Content="Menonton film" HorizontalAlignment="Left" Margin="535,273,0,0" VerticalAlignment="Top"/>
+        <local:MyCheckBox x:Name="bermainGame_chk" Content="Bermain game" HorizontalAlignment="Left" Margin="535,294,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
